@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface TextInputProps {
     type: "password" | "text";
@@ -13,10 +13,7 @@ const inputTypeMapping = {
 }
 
 export default function SInput({ type, name, setter, placeholder }: TextInputProps) {
-    const [value, setValue] = useState<string | number>("");
-
     const updateValue = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setValue(e.target.value);
         setter(e.target.value);
     }
 

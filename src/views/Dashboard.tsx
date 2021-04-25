@@ -1,26 +1,25 @@
-import React, { useContext, useState } from 'react';
-import { useHistory } from "react-router-dom";
-import { GlobalContext } from '../GlobalContext';
-
+import React from 'react';
+import TorrentSettingsModal from '../modules/TorrentSettingsModal';
+import TorrentsList from "../modules/TorrentsList";
 
 export default function Dashboard() {
-    const { qbittorrentService } = useContext(GlobalContext);
-    const [torrents, setTorrents] = useState([{ name: "test" }, { name: "test2" }]);
-
-    const history = useHistory();
-
-    const logOut = () => {
-        qbittorrentService.logout();
-        history.push('/login');
-    }
+    // const history = useHistory();
+    //
+    // const logOut = () => {
+    //     qbittorrentService.logout();
+    //     history.push('/login');
+    // }
 
     return (
         <div>
-            <h1>Welcome to the dashboard</h1>
-            <button className="bg-blue-500 p-2 rounded w-64" onClick={logOut}>Log out</button>
+            <div className="flex justify-end pt-4 pr-4">
+                <TorrentSettingsModal />
+            </div>
 
-            <div className="">
-
+            <div className="flex">
+                <div className="m-4 min-w-0 w-full">
+                    <TorrentsList />
+                </div>
             </div>
         </div>
     )

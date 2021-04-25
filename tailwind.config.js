@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   theme: {
     extend: {
       colors: {
@@ -21,13 +22,18 @@ module.exports = {
           13: "#ebcb8b",
           14: "#a3be8c",
           15: "#b48ead"
+        },
+        green: {
+          light: "hsl(92, 70%, 65%)"
         }
       },
     }
   },
   variants: {
     extend: {
-      cursor: ['disabled']
+      // cursor: ['disabled'],
+      // textColor: ['active'],
+      // backgroundColor: ['active']
     }
   },
   plugins: [],

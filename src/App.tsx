@@ -13,7 +13,7 @@ import Login from './views/Login';
 function App() {
   // Global context state for the app
   const [authenticated, setAuthenticated] = useState<boolean | null>(null);
-  const [qbittorrentService, setQbittorrentService] = useState(new QbittorrentService(setAuthenticated))
+  const [qbittorrentService] = useState(new QbittorrentService(setAuthenticated))
 
   const globalContext = {
     authenticated,
@@ -23,7 +23,7 @@ function App() {
 
   useEffect(() => {
     qbittorrentService.validateAuthentication();
-  }, []);
+  }, [qbittorrentService]);
 
   return (
     <div>
