@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useHistory } from "react-router-dom";
 import LoadingSpinner from '../components/LoadingSpinner';
-import SInput from '../components/SInput';
+import { SInput } from 'skippythesnakes-react-components';
 import { GlobalContext } from '../GlobalContext';
 
 export default function Login() {
@@ -28,7 +28,7 @@ export default function Login() {
 
     return (
         <div className="flex justify-center mt-64">
-            <div className="w-96 max-w-lg min-w-max p-8 rounded bg-nord-2 shadow-lg">
+            <div className="w-96 max-w-lg min-w-max p-8 rounded bg-nord-1 shadow-lg">
                 <div className="flex justify-center mb-2">
                     <img className="w-24" src="https://upload.wikimedia.org/wikipedia/commons/6/66/New_qBittorrent_Logo.svg" alt="qBittorrent logo" />
                 </div>
@@ -37,8 +37,8 @@ export default function Login() {
                 <div className="flex justify-center">
                     <div>
                         <div className="flex flex-col gap-2 w-64">
-                            <SInput type="text" name="username" placeholder="Username" setter={setUsername} />
-                            <SInput type="password" name="password" placeholder="Password" setter={setPassword} />
+                            <SInput type="text" name="username" placeholder="Username" setValue={setUsername} value={username} />
+                            <SInput type="password" name="password" placeholder="Password" setValue={setPassword} value={password} />
                         </div>
                         <div className={`flex ${invalidLogin ? '' : 'opacity-0'} text-nord-11 mt-1`}>
                             <p>Invalid username or password</p>

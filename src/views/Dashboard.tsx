@@ -1,4 +1,5 @@
 import React from 'react';
+import AddTorrents from '../modules/AddTorrents';
 import TorrentSettingsModal from '../modules/TorrentSettingsModal';
 import TorrentsList from "../modules/TorrentsList";
 
@@ -14,6 +15,10 @@ export default function Dashboard() {
         <div>
             <div className="flex justify-end pt-4 pr-4">
                 <TorrentSettingsModal />
+            </div>
+
+            <div>
+                <AddTorrents />
             </div>
 
             <div className="flex">

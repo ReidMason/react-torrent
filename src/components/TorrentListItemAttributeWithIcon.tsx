@@ -1,5 +1,5 @@
 import React from 'react'
-import Popover from './Popover';
+import { SPopover } from 'skippythesnakes-react-components';
 
 interface TorrentListItemAttributeWithIconProps {
     value: String;
@@ -22,9 +22,9 @@ export default function AttributeWithIcon({ value, icon, iconColour, popoverText
     return (
         <div>
             {popoverText ?
-                <Popover text={popoverText}>
+                <SPopover text={popoverText}>
                     {component}
-                </Popover>
+                </SPopover>
                 : component
             }
         </div>

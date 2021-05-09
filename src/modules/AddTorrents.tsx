@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import AddTorrentModal from '../components/AddTorrentModal';
-import SButton from '../components/SButton';
+import { SButton } from 'skippythesnakes-react-components';
 
 export default function AddTorrents() {
     const [addTorrentModalOpen, setAddTorrentModalOpen] = useState<boolean>(false);

@@ -1,5 +1,5 @@
 import React from 'react'
-import SButton from './SButton'
+import { SButton } from 'skippythesnakes-react-components';
 import TorrentActionButtons from './TorrentActionButtons'
 
 interface BulkTorrentActionsProps {

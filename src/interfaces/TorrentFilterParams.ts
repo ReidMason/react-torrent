@@ -1,6 +1,6 @@
 export default interface TorrentFilterParams {
     sort?: string;
-    reverse?: boolean;
+    reverse: boolean;
     hashes?: Array<string>;
     filter?: string;
     category?: string;

@@ -1,7 +1,7 @@
 import { Dialog } from '@headlessui/react';
 import React, { useContext, useState } from 'react';
 import { GlobalContext } from '../GlobalContext';
-import SButton from './SButton';
+import { SButton } from 'skippythesnakes-react-components';
 import Toggle from './Toggle';
 import { LinkIcon } from '@heroicons/react/solid'
 

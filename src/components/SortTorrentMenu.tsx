@@ -1,5 +1,5 @@
 import { Listbox, Transition } from '@headlessui/react';
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { SelectorIcon } from '@heroicons/react/solid';
 
 interface SortTorrentMenuProps {
@@ -24,7 +24,7 @@ export default function SortTorrentMenu({ setSort, sort }: SortTorrentMenuProps)
 
     return (
         <div className="text-nord-6">
-            <p>Sort order</p>
+            <p>Sort</p>
             <Listbox value={selectedSort} onChange={updateSelectedSort}>
                 {({ open }) => (
                     <div className="relative">
